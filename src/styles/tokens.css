@@ -1,0 +1,82 @@
+/* Design tokens — the single source of truth for colour, type, spacing and elevation. */
+:root {
+  /* Brand */
+  --navy: #002060;
+  --navy-dark: #001540;
+  --navy-light: #003080;
+  --gold: #c4922a;
+  --gold-light: #f0c060;
+  --gold-text: #86600f; /* AA-contrast gold for small text on light backgrounds */
+
+  /* Surfaces */
+  --bg: #f0f2f8;
+  --surface: #ffffff;
+  --surface-alt: #f5f7ff;
+  --field-bg: #f8f9fe;
+  --sidebar: #001a4a;
+  --border: #d0d8ec;
+  --border-strong: #b4c0de;
+  --overlay: rgba(0, 10, 30, 0.55);
+
+  /* Text */
+  --text: #0d1b3e;
+  --muted: #5a6a8a;
+  --on-dark: #ffffff;
+  --on-dark-muted: rgba(255, 255, 255, 0.62);
+  --on-dark-faint: rgba(255, 255, 255, 0.62);
+
+  /* Status tones (foreground / background) */
+  --success: #1a7a4a;
+  --success-bg: #e6f4ec;
+  --warning: #9a5c00;
+  --warning-bg: #fff3dc;
+  --danger: #9b1c1c;
+  --danger-bg: #fee8e8;
+  --info: #1a5fa0;
+  --info-bg: #e6f0fb;
+  --purple: #7b3fa0;
+  --purple-bg: #f5eef8;
+  --neutral: var(--navy);
+  --neutral-bg: #eef1fa;
+
+  /* Shape & elevation */
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --shadow-sm: 0 1px 2px rgba(0, 26, 74, 0.06);
+  --shadow-md: 0 4px 14px rgba(0, 26, 74, 0.08);
+  --shadow-lg: 0 24px 60px rgba(0, 10, 30, 0.35);
+  --focus: #86600f;
+  --ring: 0 0 0 3px rgba(134, 96, 15, 0.28);
+
+  /* Type */
+  --font: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --fs-xs: 11px;
+  --fs-sm: 12px;
+  --fs-base: 13px;
+  --fs-md: 14px;
+  --fs-lg: 16px;
+  --fs-xl: 20px;
+  --fs-2xl: 24px;
+
+  /* Layout */
+  --sidebar-width: 240px;
+  --page-padding: 28px 32px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-padding: 20px 16px 32px;
+  }
+}
+
+/* Tone helpers: set a --tone / --tone-bg pair so components can theme themselves. */
+.tone-success { --tone: var(--success); --tone-bg: var(--success-bg); }
+.tone-warning { --tone: var(--warning); --tone-bg: var(--warning-bg); }
+.tone-danger  { --tone: var(--danger);  --tone-bg: var(--danger-bg); }
+.tone-info    { --tone: var(--info);    --tone-bg: var(--info-bg); }
+.tone-purple  { --tone: var(--purple);  --tone-bg: var(--purple-bg); }
+.tone-gold    { --tone: var(--gold-text); --tone-bg: var(--warning-bg); }
+.tone-neutral { --tone: var(--neutral); --tone-bg: var(--neutral-bg); }

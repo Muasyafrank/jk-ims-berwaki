@@ -1,0 +1,7 @@
+export const text = (name, label, extra) => ({ name, label, ...extra })
+export const half = (name, label, extra) => text(name, label, { half: true, ...extra })
+export const select = (name, label, options, extra) => half(name, label, { type: 'select', options, ...extra })
+export const date = (name, label, extra) => half(name, label, { type: 'date', ...extra })
+export const money = (name, label, extra) => half(name, label, { type: 'number', ...extra })
+export const area = (name, label, rows = 2, extra) => text(name, label, { type: 'textarea', rows, ...extra })
+export const reference = (label) => half('ref', label, { mono: true })
